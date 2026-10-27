@@ -1,0 +1,12 @@
+# config.php তে ডাটাবেজ/SMS এর গোপন তথ্য থাকে: ব্রাউজার থেকে সরাসরি খোলা বন্ধ
+<FilesMatch "^(config|config\.sample)\.php$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+# .git ফোল্ডার ব্রাউজার থেকে খোলা বন্ধ
+RedirectMatch 404 /\.git

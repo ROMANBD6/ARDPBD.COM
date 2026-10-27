@@ -1,0 +1,8 @@
+# গোপন তথ্য ও সার্ভারে তৈরি হওয়া ফাইল GitHub এ যাবে না
+config.php
+data/*
+!data/.htaccess
+uploads/*
+!uploads/logo.jpg
+.DS_Store
+Thumbs.db
